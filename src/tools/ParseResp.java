@@ -40,7 +40,8 @@ public class ParseResp extends HttpServlet {
 		// TODO Auto-generated method stub
 		String resp = request.getParameter ("Resp");
 		HashMap<String, String> map = new HashMap<String, String>();
-	    resp = resp.replaceAll("<response>", "");
+		
+	    resp = resp.trim().replaceAll("<response>", "");
 	    resp = resp.replaceAll("</response>", "");
 	    resp = resp.replaceAll("\\</.*?\\>", " ");
 	    resp = resp.replaceAll("<", "").replaceAll(">", ":");
